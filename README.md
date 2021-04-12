@@ -1,2 +1,2 @@
-# companion-module-tvone-corio
+# companion-module-nexo-nxamp
 See [HELP.md](./HELP.md) and [LICENSE](./LICENSE)
