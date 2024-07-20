@@ -5,6 +5,7 @@ export function queryOnConnect() {
 	//function to make initial queries and start message command queue
 	this.subscribeActions()
 	this.subscribeFeedbacks()
+	this.startKeepAlive()
 }
 
 export function sendCommand(cmd) {
@@ -50,7 +51,7 @@ export function initTCP(host, port) {
 			this.receiveBuffer = Buffer.from('')
 		})
 		this.socket.on('connect', () => {
-			this.log('info', `Connected to NXAMP :  ${host}:${port}`)
+			this.log('info', `Connected to NXAMP:  ${host}:${port}`)
 			this.updateStatus(InstanceStatus.Ok, 'Connected')
 			this.receiveBuffer = Buffer.from('')
 			this.startCmdQueue()
