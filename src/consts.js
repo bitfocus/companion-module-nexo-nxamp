@@ -1,7 +1,7 @@
 export const default_port = 49280
 export const msg_delay = 5
 export const keep_alive_timeout = 30000
-export const keep_alive_msg = ''
+export const keep_alive_msg = 'devstatus runmode'
 export const EOL = '\n'
 
 export const choices = {

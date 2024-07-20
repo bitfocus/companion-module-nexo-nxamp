@@ -10,4 +10,9 @@ This module supports NEXO NXAMP Power Amplifiers. Please submit a feature reques
 
 ## Version 1.0.0
 
-First Release
+- First Release
+
+## Version 2.0.0
+
+- Update for Companion 3.
+- Add Keep Alive message
