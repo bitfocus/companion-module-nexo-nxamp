@@ -1,3 +1,5 @@
+import { combineRgb } from '@companion-module/base'
+
 export const default_port = 49280
 export const msg_delay = 5
 export const keep_alive_timeout = 30000
@@ -53,8 +55,40 @@ export const actionOptions = {
 	},
 }
 
+export const cmdType = {
+	set: 'set',
+	get: 'get',
+	ok: 'OK',
+	space: ' ',
+}
+
 export const cmd = {
-	power: 'set AMP:Power 0 0 ',
-	overMute: 'set AMP:Overmute 0 0 ',
-	channelMute: 'set AMP:Ch/Mute ',
+	devstatus: 'devstatus',
+	runmode: 'runmode',
+	power: 'AMP:Power',
+	overMute: 'AMP:Overmute',
+	channelMute: 'AMP:Ch/Mute',
+}
+
+export const colours = {
+	black: combineRgb(0, 0, 0),
+	white: combineRgb(255, 255, 255),
+	red: combineRgb(255, 0, 0),
+	green: combineRgb(0, 204, 0),
+	darkblue: combineRgb(0, 0, 102),
+}
+
+export const styles = {
+	red: {
+		bgcolor: colours.red,
+		color: colours.black,
+	},
+	green: {
+		bgcolor: colours.green,
+		color: colours.black,
+	},
+	blue: {
+		bgcolor: colours.darkblue,
+		color: colours.white,
+	},
 }

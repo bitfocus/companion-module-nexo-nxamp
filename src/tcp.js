@@ -1,10 +1,16 @@
+import { Buffer } from 'node:buffer'
 import { InstanceStatus, TCPHelper } from '@companion-module/base'
-import { EOL } from './consts.js'
+import { EOL, cmd, cmdType } from './consts.js'
 
 export function queryOnConnect() {
 	//function to make initial queries and start message command queue
-	this.subscribeActions()
-	this.subscribeFeedbacks()
+	const x = '0'
+	const y = '0'
+	this.addCmdtoQueue(cmdType.get + cmdType.space + cmd.power + cmdType.space + x + cmdType.space + y)
+	this.addCmdtoQueue(cmdType.get + cmdType.space + cmd.overMute + cmdType.space + x + cmdType.space + y)
+	for (let i = 0; i < 4; i++) {
+		this.addCmdtoQueue(cmdType.get + cmdType.space + cmd.channelMute + cmdType.space + i + cmdType.space + y)
+	}
 	this.startKeepAlive()
 }
 
