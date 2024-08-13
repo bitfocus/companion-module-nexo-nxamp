@@ -21,6 +21,7 @@ class NXAMP extends InstanceBase {
 
 	async configUpdated(config) {
 		this.config = config
+		this.newNXAmp()
 		this.updateStatus(InstanceStatus.Connecting)
 		this.initTCP(this.config.host, this.config.port)
 		this.updateActions() // export actions
@@ -36,6 +37,22 @@ class NXAMP extends InstanceBase {
 		if (this.socket) {
 			this.socket.destroy()
 			delete this.socket
+		}
+	}
+
+	newNXAmp() {
+		if (this.NXAMP) {
+			delete this.NXAMP
+		}
+		this.NXAMP = {
+			power: null,
+			overmute: null,
+			mute: {
+				ch1: null,
+				ch2: null,
+				ch3: null,
+				ch4: null,
+			},
 		}
 	}
 
