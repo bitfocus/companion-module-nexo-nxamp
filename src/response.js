@@ -1,9 +1,8 @@
 import { cmd, cmdType } from './consts.js'
 export function processResponse(msg) {
-	console.log(`Message recieved: ${msg}`)
 	const data = msg.split(cmdType.space)
 	if (data[0] !== cmdType.ok) {
-		this.log('warn', msg)
+		this.log('info', `Recieved ${msg}`)
 		return
 	}
 	if (data[1] === cmd.devstatus) {
