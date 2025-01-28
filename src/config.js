@@ -1,5 +1,5 @@
 import { Regex } from '@companion-module/base'
-import { default_port, choices } from './consts.js'
+import { default_port } from './consts.js'
 
 // Return config fields for web config
 export function getConfigFields() {

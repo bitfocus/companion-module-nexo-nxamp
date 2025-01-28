@@ -16,7 +16,7 @@ export default function (self) {
 					cmdType.space +
 					y +
 					cmdType.space +
-					action.options.power
+					action.options.power,
 			)
 		},
 		subscribe: () => {
@@ -40,7 +40,7 @@ export default function (self) {
 					cmdType.space +
 					y +
 					cmdType.space +
-					action.options.overmute
+					action.options.overmute,
 			)
 		},
 		subscribe: () => {
@@ -64,7 +64,7 @@ export default function (self) {
 					cmdType.space +
 					y +
 					cmdType.space +
-					action.options.muteState
+					action.options.muteState,
 			)
 		},
 		subscribe: (action) => {
