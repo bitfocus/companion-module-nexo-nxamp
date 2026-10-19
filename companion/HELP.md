@@ -2,26 +2,22 @@
 
 This module supports NEXO NXAMP Power Amplifiers. Please submit a feature request on [Github](https://github.com/bitfocus/companion-module-nexo-nxamp/issues) if you require additional commands.
 
-## Supported Actions and Feedbacks
+Requires Companion 5.1 or later.
 
-- Power On/Off
-- Overmute
-- Channel Mute
+## Configuration
 
-## Version 1.0.0
+Enter the amplifier's IP address, and the control port if it is not the default of 49280.
 
-- First Release
+The module sends a keepalive every 30 seconds.
 
-## Version 2.0.0
+## Actions
 
-- Update for Companion 3
-- Add Keep Alive message
+- **Power Control** On / Off
+- **Overmute** On / Off
+- **Channel Mute** On / Off, for channel 1 to 4
 
-## Version 2.1.0
+## Feedbacks
 
-- Add feedbacks
-- Update dependencies
-
-## Version 2.1.2
-
-- USe Node 22
+- **Power** True while the amplifier is on
+- **Overmute** True while overmute is on
+- **Channel Mute** True while the channel is muted
